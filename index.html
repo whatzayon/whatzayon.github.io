@@ -4,81 +4,184 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Felipe Zayon</title>
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fafafa;
       color: #333;
-      text-align: center;
     }
 
-    header {
-      background-color: #6a0dad; /* Roxo principal */
-      padding: 50px 20px;
-      color: white;
+    /* Container principal */
+    .profile-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Parte superior (foto + nome + botões) */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
     }
 
     .profile-pic {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 4px solid white;
+      border: 4px solid #6a0dad;
       object-fit: cover;
-      margin-bottom: 15px;
     }
 
-    h1 {
-      margin: 10px 0;
+    .profile-info {
+      flex: 1;
+      margin-left: 40px;
     }
 
-    .social-links {
-      margin: 20px 0;
+    .profile-info h1 {
+      margin: 0;
+      font-size: 26px;
     }
 
-    .social-links a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 15px;
-      border: 2px solid white;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
+    /* Estatísticas estilo Instagram */
+    .stats {
+      display: flex;
+      gap: 40px;
+      margin: 15px 0;
     }
 
-    .social-links a:hover {
-      background-color: white;
+    .stat {
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 18px;
       color: #6a0dad;
     }
 
-    .descricao {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+    /* Botões */
+    .profile-buttons a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
       border: 2px solid #6a0dad;
-      border-radius: 10px;
-      background-color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #6a0dad;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .profile-buttons a i {
+      margin-right: 6px;
+    }
+
+    .profile-buttons a:hover {
+      background-color: #6a0dad;
+      color: white;
+    }
+
+    /* Bio / descrição */
+    .descricao {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Área de destaques/projetos (estilo feed) */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background: #f8f8f8;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #6a0dad;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://avatars.githubusercontent.com/whatzayon" alt="Foto de perfil" class="profile-pic">
-    <h1>Felipe Zayon</h1>
-    <div class="social-links">
-      <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank">Instagram</a>
-      <a href="https://github.com/whatzayon" target="_blank">GitHub</a>
-    </div>
-  </header>
+  <div class="profile-container">
+    <!-- Cabeçalho -->
+    <div class="profile-header">
+      <img src="https://avatars.githubusercontent.com/whatzayon" alt="Foto de perfil" class="profile-pic">
 
-  <section class="descricao">
-    <p>
-      sei lakk
-    </p>
-  </section>
+      <div class="profile-info">
+        <h1>Felipe Zayon</h1>
+
+        <!-- Estatísticas estilo Instagram -->
+        <div class="stats">
+          <div class="stat">
+            <strong>25</strong>
+            Projetos
+          </div>
+          <div class="stat">
+            <strong>120</strong>
+            Seguidores
+          </div>
+          <div class="stat">
+            <strong>180</strong>
+            Seguindo
+          </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="profile-buttons">
+          <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="https://github.com/whatzayon" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descrição -->
+    <div class="descricao">
+      <p>
+        👋 sei lakk  
+        💻 Trabalho feito com IA 
+      </p>
+    </div>
+
+    <!-- Projetos estilo feed -->
+    <div class="projects">
+      <div class="project-card">
+        <h3>🌐 Projeto 1</h3>
+        <p>Um site pessoal desenvolvido em HTML, CSS e JS.</p>
+      </div>
+      <div class="project-card">
+        <h3>📱 Projeto 2</h3>
+        <p>Aplicativo mobile feito em React Native.</p>
+      </div>
+      <div class="project-card">
+        <h3>🤖 Projeto 3</h3>
+        <p>Bot automatizado para Discord.</p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
