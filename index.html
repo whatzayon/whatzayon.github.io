@@ -147,6 +147,42 @@
       background-color: #510787;
     }
 
+    /* Seção de navegação de posts */
+    .nav-posts {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid #dbdbdb;
+    }
+
+    .nav-posts a {
+      flex: 1;
+      padding: 15px 0;
+      text-align: center;
+      text-decoration: none;
+      color: #8e8e8e;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-posts a i {
+      margin-right: 5px;
+      font-size: 16px;
+    }
+
+    .nav-posts a.active {
+      color: #262626;
+    }
+
+    .nav-posts a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #262626;
+    }
+
     /* Seção de Fotos (nova) */
     .photo-section {
       text-align: center;
@@ -213,4 +249,59 @@
           </div>
         </div>
 
-        <div class
+        <div class="profile-buttons">
+          <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="https://github.com/whatzayon" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="descricao">
+      <p>
+        👋 sei lakk  
+        💻 Trabalho feito com IA  
+      </p>
+    </div>
+
+    <div class="nav-posts">
+        <a href="#" class="active"><i class="fas fa-th"></i></a>
+        <a href="#"><i class="fas fa-bookmark"></i></a>
+        <a href="#"><i class="fas fa-user-tag"></i></a>
+    </div>
+
+    <div class="projects">
+      <div class="project-card">
+        <div>
+          <h3>🌐 Projeto 1</h3>
+          <p>Um site pessoal desenvolvido em HTML, CSS e JS.</p>
+        </div>
+        <a href="https://github.com/seu-usuario/projeto1-url" target="_blank" class="project-link">Ver Projeto</a>
+      </div>
+      <div class="project-card">
+        <div>
+          <h3>📱 Projeto 2</h3>
+          <p>Aplicativo mobile feito em React Native.</p>
+        </div>
+        <a href="https://github.com/seu-usuario/projeto2-url" target="_blank" class="project-link">Ver Projeto</a>
+      </div>
+      <div class="project-card">
+        <div>
+          <h3>🤖 Projeto 3</h3>
+          <p>Bot automatizado para Discord.</p>
+        </div>
+        <a href="https://github.com/seu-usuario/projeto3-url" target="_blank" class="project-link">Ver Projeto</a>
+      </div>
+    </div>
+    
+    <div class="photo-section">
+      <div class="icon-box">
+        <i class="fas fa-camera"></i>
+      </div>
+      <h3>Compartilhar fotos</h3>
+      <p>Quando você compartilhar fotos, elas aparecerão no seu perfil.</p>
+      <a href="#" class="share-link">Compartilhar sua primeira foto</a>
+    </div>
+  </div>
+
+</body>
+</html>
