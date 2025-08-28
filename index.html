@@ -3,118 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
+  <title>Felipe Zayon</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4B0082, #6A0DAD);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .card {
-      background: white;
+      background-color: #f5f5f5;
       color: #333;
-      padding: 30px;
-      border-radius: 20px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      width: 320px;
-      transform: translateY(30px);
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
     }
 
-    @keyframes fadeInUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s;
+    header {
+      background-color: #6a0dad; /* Roxo principal */
+      padding: 50px 20px;
+      color: white;
     }
 
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 4px solid #4B0082;
+      border: 4px solid white;
       object-fit: cover;
       margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #4B0082;
+      margin: 10px 0;
     }
 
-    p {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 20px;
+    .social-links {
+      margin: 20px 0;
     }
 
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .social a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 30px;
-      background: #4B0082;
-      color: white;
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 15px;
+      border: 2px solid white;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 16px;
+      color: white;
       transition: 0.3s;
     }
 
-    .social a:hover {
-      background: #6A0DAD;
+    .social-links a:hover {
+      background-color: white;
+      color: #6a0dad;
     }
 
-    .social i {
-      margin-right: 8px;
+    .descricao {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid #6a0dad;
+      border-radius: 10px;
+      background-color: white;
     }
   </style>
-  <!-- Ícones do Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="card">
-    <!-- Foto de perfil -->
-    <img src="<img src="perfil.jpg" alt="Foto de perfil" class="profile-pic">
-" alt="Foto de perfil" class="profile-pic">
 
-    <!-- Nome -->
+  <header>
+    <img src="https://avatars.githubusercontent.com/whatzayon" alt="Foto de perfil" class="profile-pic">
     <h1>Felipe Zayon</h1>
-    <p>Sei lakk</p>
-
-    <!-- Botões sociais -->
-    <div class="social">
-      <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://github.com/whatzayon" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
+    <div class="social-links">
+      <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank">Instagram</a>
+      <a href="https://github.com/whatzayon" target="_blank">GitHub</a>
     </div>
-  </div>
+  </header>
+
+  <section class="descricao">
+    <p>
+      sei lakk
+    </p>
+  </section>
+
 </body>
 </html>
