@@ -1,25 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Minha Primeira Página na Nuvem!</title>
-<style>
-body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;
-margin-top: 50px; background-color: #f0f8ff; color: #333; }
-.container { padding: 20px; max-width: 600px; margin: auto; background: white;
-border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-h1 { color: #0056b3; }
-b { color: green; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4B0082, #6A0DAD);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 320px;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #4B0082;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #4B0082;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #4B0082;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      background: #6A0DAD;
+    }
+
+    .social i {
+      margin-right: 8px;
+    }
+  </style>
+  <!-- Ícones do Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-<h1>🚀 Olá, Mundo da Nuvem! 🚀</h1>
-<p>Meu nome é <b>[Felipe Zayon]</b> e este site está hospedado de
-graça no GitHub Pages.</p>
-<p>Isso é um exemplo de <b>PaaS (Plataforma como Serviço)</b>. Eu não precisei
-configurar um servidor, apenas forneci o código e o GitHub publicou para mim!</p>
-</div>
+  <div class="card">
+    <!-- Foto de perfil -->
+    <img src="<img src="perfil.jpg" alt="Foto de perfil" class="profile-pic">
+" alt="Foto de perfil" class="profile-pic">
+
+    <!-- Nome -->
+    <h1>Felipe Zayon</h1>
+    <p>Sei lakk</p>
+
+    <!-- Botões sociais -->
+    <div class="social">
+      <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://github.com/whatzayon" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </div>
 </body>
 </html>
