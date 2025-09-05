@@ -21,13 +21,33 @@
       padding: 40px 20px;
     }
 
+    /* Glow atrás da foto */
+    .profile-pic-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(106,13,173,0.6), transparent 70%);
+      filter: blur(25px);
+      z-index: 0;
+    }
+
     .profile-pic {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       border: 3px solid #6a0dad; /* dark purple */
       object-fit: cover;
-      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -129,24 +149,26 @@
 <body>
 
   <header>
-    <!-- Foto de perfil -->
-    <img src="https://github.com/whatzayon/whatzayon.github.io/blob/main/Ney.jpg" alt="Foto de perfil" class="profile-pic">
+    <!-- Foto de perfil com glow (usando seu perfil do GitHub automaticamente) -->
+    <div class="profile-pic-container">
+      <div class="glow"></div>
+      <img src="https://github.com/whatzayon.png" alt="Foto de perfil" class="profile-pic">
+    </div>
 
     <!-- Nome -->
     <h1>whatzayon</h1>
     <p class="username">@zayon.designer</p>
 
-    <!-- Ícones sociais -->
+    <!-- Ícones sociais com redirecionamento -->
     <div class="icons">
       <a href="https://wa.me/5581993873706" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://instagram.com/whatzayon" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://github.com/whatzayon" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 
-    <!-- Abas -->
+    <!-- Apenas a aba "sobre" -->
     <div class="tabs">
-      <span class="active">stanti</span>
-      <span>sobre</span>
+      <span class="active">sobre</span>
     </div>
   </header>
 
@@ -176,7 +198,7 @@
   </div>
 
   <footer>
-    © 2025 - whatzayon
+    © whatzayon - 2025
   </footer>
 
 </body>
