@@ -3,298 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Felipe Zayon</title>
+  <title>whatzayon</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #fafafa;
-      color: #333;
-    }
-
-    /* Container principal */
-    .profile-container {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-    }
-
-    /* Parte superior (foto + nome + botões) */
-    .profile-header {
+      font-family: 'Arial', sans-serif;
+      background: #000;
+      color: #fff;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-around;
-      padding: 20px;
-      border-bottom: 1px solid #ddd;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
     }
 
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 4px solid transparent; 
+      border: 3px solid #6a0dad; /* dark purple */
       object-fit: cover;
+      margin-bottom: 15px;
     }
 
-    .profile-info {
-      flex: 1;
-      margin-left: 40px;
+    h1 {
+      font-size: 22px;
+      margin: 8px 0;
     }
 
-    .profile-info h1 {
-      margin: 0;
-      font-size: 26px;
+    .username {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 15px;
     }
 
-    /* Estatísticas estilo Instagram */
-    .stats {
-      display: flex;
-      gap: 40px;
+    .icons {
       margin: 15px 0;
     }
 
-    .stat {
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 18px;
-      color: #333;
-    }
-    
-    .stat-text {
-      color: #333;
-    }
-
-    /* Botões */
-    .profile-buttons a {
+    .icons a {
       display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      border: 2px solid #6a0dad;
-      border-radius: 8px;
-      text-decoration: none;
+      margin: 0 8px;
+      font-size: 22px;
       color: #6a0dad;
-      font-weight: bold;
+      background: #111;
+      padding: 10px;
+      border-radius: 50%;
       transition: 0.3s;
     }
 
-    .profile-buttons a i {
-      margin-right: 6px;
-    }
-
-    .profile-buttons a:hover {
-      background-color: #6a0dad;
+    .icons a:hover {
+      background: #6a0dad;
       color: white;
     }
 
-    /* Bio / descrição */
-    .descricao {
-      padding: 20px;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* Área de destaques/projetos (estilo feed) */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .project-card {
-      background: #f8f8f8;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #6a0dad;
-    }
-
-    .project-card .project-link {
-      display: block;
-      width: fit-content;
-      margin-top: 15px;
-      padding: 8px 16px;
-      background-color: #6a0dad;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      align-self: flex-start;
-    }
-
-    .project-card .project-link:hover {
-      background-color: #510787;
-    }
-
-    /* Seção de navegação de posts */
-    .nav-posts {
+    .tabs {
       display: flex;
       justify-content: center;
-      border-top: 1px solid #dbdbdb;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #bbb;
     }
 
-    .nav-posts a {
-      flex: 1;
-      padding: 15px 0;
-      text-align: center;
-      text-decoration: none;
-      color: #8e8e8e;
-      font-weight: 500;
+    .tabs span {
+      margin: 0 10px;
+      cursor: pointer;
       position: relative;
     }
 
-    .nav-posts a i {
-      margin-right: 5px;
+    .tabs span.active {
+      color: #6a0dad;
+      font-weight: bold;
+    }
+
+    .social-card {
+      width: 90%;
+      max-width: 400px;
+      background: linear-gradient(145deg, #111, #1a1a1a);
+      border-radius: 15px;
+      padding: 15px 20px;
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .social-card:hover {
+      background: linear-gradient(145deg, #6a0dad, #4b0082);
+      transform: translateY(-3px);
+    }
+
+    .social-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-left i {
+      font-size: 22px;
+      margin-right: 12px;
+      color: #6a0dad;
+    }
+
+    .social-left span {
       font-size: 16px;
     }
 
-    .nav-posts a.active {
-      color: #262626;
+    .social-right i {
+      font-size: 16px;
+      color: #bbb;
     }
 
-    .nav-posts a.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #262626;
-    }
-
-    /* Seção de Fotos (nova) */
-    .photo-section {
-      text-align: center;
-      padding: 40px 20px;
-      color: #8e8e8e;
-    }
-    .photo-section .icon-box {
-      border: 2px solid #dbdbdb;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .photo-section .icon-box i {
-      font-size: 30px;
-      color: #8e8e8e;
-    }
-    .photo-section h3 {
-      font-size: 24px;
-      font-weight: 500;
-      color: #262626;
-      margin-bottom: 10px;
-    }
-    .photo-section p {
-      margin: 0;
-      color: #8e8e8e;
-    }
-    .photo-section .share-link {
-      display: inline-block;
-      margin-top: 20px;
-      color: #0095f6;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .photo-section .share-link:hover {
-      text-decoration: underline;
+    footer {
+      margin: 40px 0 20px;
+      font-size: 12px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <div class="profile-container">
-    <div class="profile-header">
-      <img src="https://avatars.githubusercontent.com/whatzayon" alt="Foto de perfil" class="profile-pic">
+  <header>
+    <!-- Foto de perfil -->
+    <img src="https://avatars.githubusercontent.com/u/00000000" alt="Foto de perfil" class="profile-pic">
 
-      <div class="profile-info">
-        <h1>Felipe Zayon</h1>
+    <!-- Nome -->
+    <h1>whatzayon</h1>
+    <p class="username">@zayon.designer</p>
 
-        <div class="stats">
-          <div class="stat">
-            <strong>1</strong>
-            <span class="stat-text">Projetos</span>
-          </div>
-        </div>
-
-        <div class="profile-buttons">
-          <a href="https://www.instagram.com/whatzayon/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-          <a href="https://github.com/whatzayon" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-        </div>
-      </div>
+    <!-- Ícones sociais -->
+    <div class="icons">
+      <a href="https://wa.me/5581993873706" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/whatzayon" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/whatzayon" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 
-    <div class="descricao">
-      <p>
-        👋 sei lakk
-        <br><br>
-        💻 Trabalho feito com IA
-      </p>
+    <!-- Abas -->
+    <div class="tabs">
+      <span class="active">stanti</span>
+      <span>sobre</span>
     </div>
+  </header>
 
-    <div class="nav-posts">
-        <a href="https://github.com/whatzayon" target="_blank" class="active"><i class="fas fa-th"></i></a>
-        <a href="https://github.com/whatzayon" target="_blank"><i class="fas fa-bookmark"></i></a>
-        <a href="https://github.com/whatzayon" target="_blank"><i class="fas fa-user-tag"></i></a>
+  <!-- Cards sociais -->
+  <div class="social-card" onclick="window.open('https://wa.me/5581993873706', '_blank')">
+    <div class="social-left">
+      <i class="fab fa-whatsapp"></i>
+      <span>Whatsapp</span>
     </div>
-
-    <div class="projects">
-      <div class="project-card">
-        <div>
-          <h3>🌐 Projeto 1</h3>
-          <p>Um site pessoal desenvolvido em HTML, CSS e JS.</p>
-        </div>
-        <a href="https://github.com/seu-usuario/projeto1-url" target="_blank" class="project-link">Ver Projeto</a>
-      </div>
-      <div class="project-card">
-        <div>
-          <h3>📱 Projeto 2</h3>
-          <p>Aplicativo mobile feito em React Native.</p>
-        </div>
-        <a href="https://github.com/seu-usuario/projeto2-url" target="_blank" class="project-link">Ver Projeto</a>
-      </div>
-      <div class="project-card">
-        <div>
-          <h3>🤖 Projeto 3</h3>
-          <p>Bot automatizado para Discord.</p>
-        </div>
-        <a href="https://github.com/seu-usuario/projeto3-url" target="_blank" class="project-link">Ver Projeto</a>
-      </div>
-    </div>
-    
-    <div class="photo-section">
-      <div class="icon-box">
-        <i class="fas fa-camera"></i>
-      </div>
-      <h3>Adicionar projetos</h3>
-      <p>Quando você adicionar um projeto, ele aparecerá no seu perfil.</p>
-      <a href="https://github.com/whatzayon" class="share-link" target="_blank">Adicionar seu primeiro projeto</a>
-    </div>
+    <div class="social-right"><i class="fas fa-chevron-right"></i></div>
   </div>
+
+  <div class="social-card" onclick="window.open('https://instagram.com/whatzayon', '_blank')">
+    <div class="social-left">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </div>
+    <div class="social-right"><i class="fas fa-chevron-right"></i></div>
+  </div>
+
+  <div class="social-card" onclick="window.open('https://github.com/whatzayon', '_blank')">
+    <div class="social-left">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </div>
+    <div class="social-right"><i class="fas fa-chevron-right"></i></div>
+  </div>
+
+  <footer>
+    © 2025 - whatzayon
+  </footer>
 
 </body>
 </html>
